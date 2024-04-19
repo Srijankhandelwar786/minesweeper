@@ -1,0 +1,371 @@
+body{
+    font-weight: bold;
+    text-align: center; 
+    /* background: #352b2b; */
+    background-image: url("gameimg.jpeg");
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  
+}
+.silkscreenbold {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  #fullbody{
+    display: none;
+  }
+#board{
+    width: 400px;
+    height: 400px;
+    border: 10px solid rgb(61, 61, 61);
+    background-color: lightgrey;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    box-shadow: 10px 10px 10px rgb(110, 108, 108);
+}
+
+#board div{
+    width: 48px;
+    height: 48px;
+    border: 1px solid whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(72, 72, 72, 0.2), 0 6px 20px 0 rgba(140, 136, 136, 0.19);
+  text-align: center;
+  
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-clicked{
+    background: darkgray;
+}
+
+.x1{
+    color: blue;
+}
+.x2{
+    color: green;
+}
+.x3{
+    color: red;
+}
+.x4{
+    color: navy;
+}
+.x5{
+    color: brown;
+}
+.x6{
+    color: teal;
+}
+.x7{
+    color: black;
+}
+.x8{
+    color: gray;
+}
+#flag-button{
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(255, 244, 244);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+#restart{
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(247, 237, 237);
+    border-radius: 10px;
+}
+
+/* popup */
+.popup {
+    
+   
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    /* margin: 2px; */
+   
+}
+.popup-content {
+    background-image: url("mineimg.jpeg") ;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    box-shadow: 3px 3px 10px black;
+    width: 25%;
+    font-weight: bolder;
+    /* margin: 20px
+    di; */
+    
+}
+.popup-content button {
+    border-radius: 5px;
+    border: none;
+    background-color:#c9c9c9 ;
+    box-shadow:2px 2px rgb(0, 0, 0);
+    padding: 4px;
+}
+#closePopup:hover{
+    background-color: black;
+    color: white;
+    border: white solid 1px;
+}
+
+/* animation */
+.confetti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1000;
+    display: none;
+    /* display: block; */
+}
+.show {
+    display: block;
+}
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #ffd300;
+    top: 0;
+    opacity: 0;
+}
+.confetti-piece:nth-child(1) {
+    left: 7%;
+    -webkit-transform: rotate(-40deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 182ms;
+    -webkit-animation-duration: 1116ms;
+}
+.confetti-piece:nth-child(2) {
+    left: 14%;
+    -webkit-transform: rotate(4deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 161ms;
+    -webkit-animation-duration: 1076ms;
+}
+.confetti-piece:nth-child(3) {
+    left: 21%;
+    -webkit-transform: rotate(-51deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 481ms;
+    -webkit-animation-duration: 1103ms;
+}
+.confetti-piece:nth-child(4) {
+    left: 28%;
+    -webkit-transform: rotate(61deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 334ms;
+    -webkit-animation-duration: 708ms;
+}
+.confetti-piece:nth-child(5) {
+    left: 35%;
+    -webkit-transform: rotate(-52deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 302ms;
+    -webkit-animation-duration: 776ms;
+}
+.confetti-piece:nth-child(6) {
+    left: 42%;
+    -webkit-transform: rotate(38deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 180ms;
+    -webkit-animation-duration: 1168ms;
+}
+.confetti-piece:nth-child(7) {
+    left: 49%;
+    -webkit-transform: rotate(11deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 395ms;
+    -webkit-animation-duration: 1200ms;
+}
+.confetti-piece:nth-child(8) {
+    left: 56%;
+    -webkit-transform: rotate(49deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 14ms;
+    -webkit-animation-duration: 887ms;
+}
+.confetti-piece:nth-child(9) {
+    left: 63%;
+    -webkit-transform: rotate(-72deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 149ms;
+    -webkit-animation-duration: 805ms;
+}
+.confetti-piece:nth-child(10) {
+    left: 70%;
+    -webkit-transform: rotate(10deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 351ms;
+    -webkit-animation-duration: 1059ms;
+}
+.confetti-piece:nth-child(11) {
+    left: 77%;
+    -webkit-transform: rotate(4deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 307ms;
+    -webkit-animation-duration: 1132ms;
+}
+.confetti-piece:nth-child(12) {
+    left: 84%;
+    -webkit-transform: rotate(42deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 464ms;
+    -webkit-animation-duration: 776ms;
+}
+.confetti-piece:nth-child(13) {
+    left: 91%;
+    -webkit-transform: rotate(-72deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 429ms;
+    -webkit-animation-duration: 818ms;
+}
+.confetti-piece:nth-child(odd) {
+    background: #7431e8;
+}
+.confetti-piece:nth-child(even) {
+    z-index: 1;
+}
+.confetti-piece:nth-child(4n) {
+    width: 5px;
+    height: 12px;
+    -webkit-animation-duration: 2000ms;
+}
+.confetti-piece:nth-child(3n) {
+    width: 3px;
+    height: 10px;
+    -webkit-animation-duration: 2500ms;
+    -webkit-animation-delay: 1000ms;
+}
+.confetti-piece:nth-child(4n-7) {
+  background: red;
+}
+@-webkit-keyframes makeItRain {
+    from {opacity: 0;}
+    50% {opacity: 1;}
+    to {-webkit-transform: translateY(350px);}
+}
+
+
+
+/* seconday box container */
+#sec-container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background: #6d6d6d;
+    width: 30rem;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    height: 25rem;
+    /* margin: 10rem; */
+    /* padding: 50px; */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+#difficulty{
+    /* background-color: #7431e8; */
+    /* position: absolute;  */
+     /* left: 10rem; */
+    /* display: flex; */
+    background-color: rgb(250, 250, 250);
+    background-image: url("mineimg.jpeg") ;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    margin: 10% auto;
+    padding: 20px;
+    /* border: 5px solid #491717; */
+    box-shadow: 3px 3px 10px black;
+    width: 25%;
+    font-weight: bolder;
+}
+#easylevel:hover{
+    background: rgb(141, 255, 141);
+    
+    font-size: 20px;
+    color:green
+}
+#mediumlevel:hover{
+    background: rgb(177, 177, 255);
+    font-size: 20px;
+    color:blue;
+}
+#hardlevel:hover{
+    background: rgb(248, 134, 134);
+    font-size: 20px;
+    color:red;
+}
+.dbutton{
+
+    height: 3rem;
+    width: 10rem;
+    border: none;
+    margin: 0.3rem;
+    /* border-radius: 10px; */
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 30px black ;
+}
+.show{
+    display: block;
+}
+
+
+/* responsive */
+@media  screen and (max-width: 992px) {
+    .dbutton{
+        width: 5rem;;
+        height: 23px;
+        
+    }
+    #sec-container{
+        background: #000e60;
+    }
+    #difficulty{
+        margin-top: 10rem;
+    }
+    .popup-content{
+        margin-top: 10rem;
+    }
+    body{
+        height: 60rem;
+        padding-top: 3rem;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="mine.css">
+    <script src="mine.js"></script>
+</head>
+<body>
+    
+    <h1 class="silkscreenbold" style="color: white;">Mines:<span id="mines-count">0</span></h1>
+    <div id="sec-container">
+        <div id="difficulty">
+            <h2 class="silkscreenbold" style="color: aliceblue;">Mines Sweeper</h2>
+            <button class="dbutton" id="easylevel"style="border: 3px  solid green;">Easy</button>
+            <br>
+            <button  class="dbutton" id="mediumlevel" style="border: 3px  solid blue;">Medium</button>
+            <br>
+            <button  class="dbutton" id="hardlevel" style="border: 3px  solid red;">Hard</button>
+        </div>
+        
+    </div>
+    <div id="fullbody">
+        <div id="board">
+        </div>
+        <br>
+        <div>
+            <button id="flag-button">🚩</button>
+            <button id="restart" onClick="window.location.reload();">Restart</button>
+        </div>
+    </div>
+
+
+    <!-- popup -->
+    <div id="GoPopup" class="popup">
+        <div class="popup-content">
+            <h1 style="color: red; text-shadow: 0 0 3px #000000, 0 0 5px #010000;;">
+                Game Over
+            </h1>
+            <button id="closePopup" onClick="window.location.reload();">
+                play again
+            </button>
+        </div>
+    </div>
+
+
+    <!-- celebration -->
+    <div class="confetti" id="winner">
+        <div  class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+    <audio autoplay loop>
+        <source src="the-last-piano-112677.mp3" type="audio/wav" />
+      </audio>
+    
+</body>
+</html>
